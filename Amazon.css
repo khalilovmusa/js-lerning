@@ -1,0 +1,19 @@
+.buy-button{
+  color: white;
+  background-color: orange;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+ border: none;
+
+}
+
+.add-button{
+  color: white;
+  background-color: yellow;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+
+}
