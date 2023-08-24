@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors game</title>
+</head>
+<body>
+
+  <p>Daş Kağız Qayçı oyunu</p>
+
+  <button onclick="
+  const randomNumber = Math.random();
+
+  let computerMove = '';
+  
+  if (randomNumber >=0 && randomNumber < 1/3) {
+    computerMove = 'Daş';
+  } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+    computerMove = 'Kağız';
+  } else if (randomNumber >=2/3 && randomNumber <1) {
+    computerMove = 'Qayçı';
+  }
+
+
+
+  result ='';
+
+  if (computerMove === 'Daş') {
+    result = 'Tie.';
+  } else if (computerMove === 'Kağız') {
+    result = 'You lose.';
+  } else if (computerMove === 'Qayçı') {
+    result = 'You win.';
+  }
+
+  alert(`you picked rock.Computer piscked ${computerMove}. ${result}`)
+  ">
+    Daş
+  </button>
+
+  <button onclick="
+  const randomNumber2 = Math.random();
+
+  if (randomNumber2 >=0 && randomNumber2 <1/3) {
+    console.log('Daş');
+  } else if (randomNumber2 >= 1/3 && randomNumber2 < 2/3) {
+    console.log('Kağız');
+  } else if (randomNumber2 >= 2/3 && randomNumber2 < 1) {
+    console.log('Qayçı');
+  }
+  if (randomNumber2 >=0 && randomNumber2 <1/3) {
+    alert('Kompyuter Daş secdi.Uddun');
+  } else if (randomNumber2 >= 1/3 && randomNumber2 < 2/3) {
+    alert('Kompyuter Kağız seçdi.Bərabərə')
+  } else if (randomNumber2 >= 2/3 && randomNumber2 < 1) {
+    alert('Kompyuter Qayçı seçdi.Uduzdun')
+  }
+
+  ">
+    Kağız
+  </button>
+
+  <button onclick="
+  const randomThirdNumber = Math.random();
+
+  if (randomThirdNumber >= 0 && randomThirdNumber < 1/3) {
+    console.log('Daş');
+  } else if (randomThirdNumber >= 1/3 && randomThirdNumber <2/3) {
+    console.log('Kağız');
+  } else if (randomThirdNumber >=2/3 && randomThirdNumber < 1) {
+    console.log('Qayçı');
+  }
+  if (randomThirdNumber >= 0 && randomThirdNumber < 1/3) {
+    alert('Kompyuter Daş seçdi.Uduzdun');
+  } else if (randomThirdNumber >= 1/3 && randomThirdNumber <2/3) {
+    alert('Kompyuter Kağız seçdi.Uddun');
+  } else if (randomThirdNumber >=2/3 && randomThirdNumber < 1) {
+    alert('Kompyuter Qayçı seçdi.Bərabərə');
+  }
+  ">
+    Qayçı
+  </button>
+  <script>
+  
+  </script>
+</body>
+</html>
