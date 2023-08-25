@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hour</title>
+</head>
+<body>
+  
+  <script>
+    let hour = 18;
+
+    timeVerb = '';
+
+    if (hour >=6 && hour <= 12) {
+      timeVerb = 'Good morning';
+    } else if (hour >= 13 && hour <= 17) {
+      timeVerb = 'Good afternoon';
+    } else if (hour >= 18) {
+      timeVerb = 'Good night';
+    }
+
+    alert(`${timeVerb}`);
+  </script>
+</body>
+</html>
