@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function convertTemprature (degrees , unit) {
+      if (unit === 'C') {
+        return( (degrees * 9/5) + 32 );
+      } else if (unit === 'F') {
+        return ( (degrees - 32) * 5/9 );
+      }
+    }
+
+    console.log(convertTemprature(25,'C'));
+    console.log(convertTemprature(86,'F'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function convertToCelcius(farenheit) {
+      return (farenheit - 32) * 5/9;
+    }
+
+    function convertToFarenheit(celcius) {
+      return (celcius * 9/5) + 32 ;
+    }
+
+    function convertTemprature (degrees , unit) {
+      if (unit === 'C') {
+        const result = convertToFarenheit (degrees);
+        return `${result}F`;
+      } else if(unit === 'F') {
+        const result = convertToCelcius (degrees);
+        return `${result}C`;
+      }
+    }
+
+    console.log(convertTemprature(86,'F'));
+    console.log(convertTemprature(25,'C'));
+  </script>
+</body>
+</html>
