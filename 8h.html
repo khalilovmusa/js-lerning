@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator</title>
+</head>
+
+<body>
+  <p>
+    <button onclick="
+    updateCalculation('1');
+
+    localStorage.setItem('calculation', calculation);
+    ">
+      1
+    </button>
+    <button onclick="
+  updateCalculation('2');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      2
+    </button>
+    <button onclick="
+
+  updateCalculation('3');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      3
+    </button>
+    <button onclick="
+
+  updateCalculation(' + ');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      +
+    </button>
+
+  </p>
+  <p>
+    <button onclick="
+
+    updateCalculation('4');
+
+    localStorage.setItem('calculation', calculation);
+    ">
+      4
+    </button>
+    <button onclick="
+
+  updateCalculation('5');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      5
+    </button>
+    <button onclick="
+
+  updateCalculation('6');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      6
+    </button>
+    <button onclick="
+
+  updateCalculation(' - ');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      -
+    </button>
+  </p>
+  <p>
+    <button onclick="
+
+    updateCalculation('7');
+
+    localStorage.setItem('calculation', calculation);
+    ">
+      7
+    </button>
+    <button onclick="
+
+  updateCalculation('8');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      8
+    </button>
+    <button onclick="
+
+  updateCalculation('9');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      9
+    </button>
+    <button onclick="
+
+  updateCalculation(' * ');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      *
+    </button>
+  </p>
+  <p>
+    <button onclick="
+
+    updateCalculation('0');
+
+    localStorage.setItem('calculation', calculation);
+    ">
+      0
+    </button>
+    <button onclick="
+
+  updateCalculation(' . ')
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      .
+    </button>
+    <button onclick="
+  calculation = eval(calculation);
+  updateCalculation(value);
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      =
+    </button>
+    <button onclick="
+
+  updateCalculation(' / ');
+
+  localStorage.setItem('calculation', calculation);
+  ">
+      /
+    </button>
+  </p>
+  <p>
+    <button onclick="
+    calculation = '';
+    console.log(`${'təmizləyirəmdə nəyə qışqırırsane'}`);
+
+    localStorage.setItem('calculation', calculation);
+    ">
+      TƏMİZLƏ
+    </button>
+  </p>
+  <script>
+    let calculation =  localStorage.getItem('calculation') || '';
+
+    function updateCalculation(value) {
+      calculation += value;
+      console.log(calculation);
+      localStorage.setItem('calculation',calculation)
+    }
+
+
+
+   
+
+  </script>
+</body>
+
+</html>

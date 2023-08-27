@@ -8,16 +8,40 @@
 </head>
 
 <body>
+  <button onclick="
+    playGame('heads');
+    ">
+    Heads
+  </button>
+
+  <button onclick="
+  playGame('tails');
+  ">
+    Tails
+  </button>
   <script>
-    let randomNumber = Math.random();
+    let score ={
+      wins: 0,
+      losses: 0
+    };
 
-    const guess = 'Tails';
+    function playGame (guess) {
+      let randomNumber = Math.random();
 
-    let result = '';
+    const result = randomNumber >=0.5 ? 'heads' :  'tails';
 
-    randomNumber >= 0.5 ? `${result}` : `${result}`
-    guess === reslut ? `You win.It is: ${guess}` : `You lose.It is not: ${guess}`
+    guess === result? console.log('You win') : console.log('You lose'); 
+
+    if (result === guess) {
+      score.wins ++;
+    } else {
+      score.losses ++;
+    }
+
+    console.log(score);
+    }
+ 
   </script>
-</body>
+</body> 
 
 </html>
