@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Name Change</title>
+</head>
+<body>
+  <button class="js-9a-button">
+    9a
+  </button>
+  <button class="js-9b-button">
+    9b
+  </button>
+  <script>
+   const firstButtonElem = document.querySelector('.js-9a-button');
+   console.log(firstButtonElem);
+
+   const secondButtonElem = document.querySelector('.js-9b-button');
+   console.log(secondButtonElem);
+
+   document.querySelector('.js-9b-button').innerText = '9b done!';
+   console.log(secondButtonElem);
+  </script>
+</body>
+</html>
