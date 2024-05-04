@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const randomNumber = Math.random();
+        let result = "";
+        let guess = window.prompt();
+
+        randomNumber < 0.5 ? result = "Heads" : result = "Tails";
+        result.toLowerCase() === guess.toLowerCase() ? console.log(`You Win. The result was ${result}`) : console.log(`You lose. The result was ${result}`);
+
+        console.log(result);
+    </script>
+</body>
+</html>
