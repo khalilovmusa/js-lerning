@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertLength(length, from, to) {
+            if(from==='km' && (to ==='miles' || to === 'mile')) {
+                let resultLength = (length/16)*10
+                console.log(`${resultLength}miles`);
+            }else if((from==='mile' || from==='miles') && to==='km') {
+                let resultLength = (length*16)/10;
+                console.log(`${resultLength}km`);
+            }else if(from === to){
+                console.log(`${length}${from}`);
+            }
+        }
+        convertLength(50,'mile','km');
+        convertLength(32, 'km', 'miles');
+        convertLength(50, 'km', 'km');
+        convertLength(50, 'mile', 'mile');
+    </script>
+</body>
+</html>
