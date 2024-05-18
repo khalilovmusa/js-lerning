@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        /*
         const product = {
             name: 'socks',
             price: 1090
@@ -18,6 +19,34 @@
 
         product.name = 'cotton socks';
         console.log(product);
+        */
+
+        const product2 = {
+            name: 'shirt',
+            price: 1090,
+            color: 'red',
+            ['delivery-time']: '1 day',
+            'delivery-time': '1 day',
+            fun: function function1() {
+                console.log('Function inside object');
+            }
+        };
+
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name', 'price', 'color']);
+        console.log(product2['delivery-time']);
+        console.log(product2['delivery-time','price']);
+        
+        product2.fun();
+
+        console.log(typeof console.log);
+
+        console.log(JSON.stringify(product2));
+        console.log(typeof JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
     </script>
 </body>
 </html>
