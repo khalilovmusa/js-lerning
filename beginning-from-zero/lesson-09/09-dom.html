@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>
+        hello
+    </button>
+    <script>
+        console.log(document.title);
+        document.title = 'changed';
+
+        console.log(document.body);
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = 'Changed';
+
+        // document.body.innerHTML = 'hello';
+        // document.title = 'Good Job!';
+    </script>
+</body>
+</html>
