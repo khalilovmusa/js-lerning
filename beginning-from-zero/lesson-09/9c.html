@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-heads" onclick="pickMove('heads')">Heads</button>
+    <button class="js-tails" onclick="pickMove('tails')">Tails</button>
+    <p class="js-result"></p>
+
+    <script>
+        function pickMove (move) {
+            let headsButtonElem = document.querySelector('.js-heads');
+            let tailsButtonElem = document.querySelector('.js-tails');
+            let resultDisplayElem = document.querySelector('.js-result');
+
+            if (move === 'heads') {
+                resultDisplayElem.innerText = `You chose: ${headsButtonElem.innerText}`;
+            } else if (move === 'tails') {
+                resultDisplayElem.innerText = `You chose:${tailsButtonElem.innerText}`;
+            }
+        }
+    </script>
+</body>
+</html>

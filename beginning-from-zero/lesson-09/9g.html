@@ -32,12 +32,12 @@
         function calculateTotal () {
             const inputElement = document.querySelector('.js-cost-input');
             const resultDisplayElem = document.querySelector('.js-result-display');
-            const cost = Number(inputElement.value);
+            const cost = Number(inputElement.value) * 100;
 
-            if (cost < 40) {
-                resultDisplayElem.innerHTML = `$${cost + 10}`;
+            if (cost < 4000) {
+                resultDisplayElem.innerHTML = `$${(cost + 1000)/100}`;
             }else {
-                resultDisplayElem.innerHTML = `$${ cost }`;
+                resultDisplayElem.innerHTML = `$${ cost / 100 }`;
             }
         }
 

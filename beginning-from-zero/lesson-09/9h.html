@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Type Something" onkeyup="updateDisplayElement()">
+    <p class="js-display"></p>
+
+    <script>
+        function updateDisplayElement () {
+            let updateDisplay = document.querySelector('.js-display');
+            let updateDisplayValue = document.querySelector('input').value;
+
+            updateDisplay.innerText = updateDisplayValue;
+        }
+    </script>
+</body>
+</html>
