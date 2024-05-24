@@ -28,6 +28,21 @@
             color: black;
         }
 
+        .cost-input{
+            font-size: 15px;
+            padding: 10px;
+
+        }
+
+        .calculate-button{
+            padding: 11px 15px;
+            color: #fff;
+            border: none;
+            font-size: 15px;
+            background-color: green;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -37,12 +52,12 @@
     </button>
 
     <p>Amazon Shipping Calculator</p>
-    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
     handleCostKeydown (event);
     ">
     <button onclick="
     calculateTotal()
-    ">Calculate</button>
+    " class="calculate-button">Calculate</button>
     <p class="js-result-display"></p>
 
 
