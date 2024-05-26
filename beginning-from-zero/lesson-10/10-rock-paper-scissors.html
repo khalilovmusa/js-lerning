@@ -17,6 +17,41 @@
             font-weight: bold;
 
         }
+
+        .move-icon {
+         height: 50px;
+
+        }
+
+        .move-button {
+         background-color: transparent;
+         border: 3px solid #fff;
+         border-radius: 50%;
+         width: 120px;
+         height: 120px;
+         margin-right: 5px;
+         cursor: pointer;
+        }
+
+        .result {
+         font-size: 25px;
+         font-weight: bold;
+         margin-top: 50px;
+         
+        }
+
+        .score {
+         margin-top: 60px;
+
+        }
+
+        .reset-score-button {
+         background-color: #fff;
+         border: none;
+         font-size: 15px;
+         padding: 8px 15px;
+         cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -24,27 +59,28 @@
     <!--Buttons-->
     <button onclick="
     playGame('Rock');
-    ">
-        Rock
+    " class="move-button">
+        <img src="../photos/rock-emoji.png" class="move-icon">
     </button>
 
     <button onclick="
     playGame('Paper');
-    ">
-        Paper
+    " class="move-button">
+        <img src="../photos/paper-emoji.png" class="move-icon">
     </button>
 
     <button onclick="
     playGame('Scissors');
-   ">
-        Scissors
+   " class="move-button">
+      <img src="../photos/scissors-emoji.png" class="move-icon">
     </button>
 
-    <p class="js-moves"></p>
+    <p class="js-result result"></p>
 
-    <p class="js-result"></p>
+    <p class="js-moves">
+    </p>
 
-    <p class="js-score"></p>
+    <p class="js-score score"></p>
 
     <button onclick="
       score.losses = 0;
@@ -53,7 +89,7 @@
       localStorage.removeItem('score');
       updateScoreElement();
       alert(` Wins:${score.wins}, Losses:${score.losses}, Ties:${score.ties}`);
-    ">
+    " class="reset-score-button">
      Reset score 
    </button>
 
@@ -124,14 +160,17 @@
          document.querySelector('.js-result')
          .innerHTML = result;
 
-         document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
+         document.querySelector('.js-moves').innerHTML = `You 
+      <img src="../photos/${playerMove}-emoji.png" class="move-icon">
+      <img src="../photos/${computerMove}-emoji.png" class="move-icon">
+      computer`;
 
-         <!--Result alert-->
-           alert(`You picked ${playerMove}. Computer picked ${computerMove}. 
-           ${result}\nWins:${score.wins}, Losses:${score.losses}, Ties:${score.ties}
-           `);
+         // <!--Result alert-->
+         //   alert(`You picked ${playerMove}. Computer picked ${computerMove}. 
+         //   ${result}\nWins:${score.wins}, Losses:${score.losses}, Ties:${score.ties}
+         //   `);
       }
-
+s
       function updateScoreElement () {
         document.querySelector('.js-score')
       .innerHTML = `Wins:${score.wins}, Losses:${score.losses}, Ties:${score.ties}`;
