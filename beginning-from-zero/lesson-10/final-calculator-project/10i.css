@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.display {
+    font-size: 45px;
+    color: #fff;
+    font-weight: 700;
+}
+
+p button {
+    height: 60px;
+    width: 60px;
+    font-size: 26px;
+    margin-right: 5px;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.clear {
+    height: 60px;
+    width: 60px;
+    font-size: 16px;
+    margin-right: 5px;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.black-button {
+    background-color: #1e1e1e;
+}
+
+.orange-button {
+    background-color: orange;
+}

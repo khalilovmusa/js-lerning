@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .display {
+            font-size: 45px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        p button {
+            height: 60px;
+            width: 60px;
+            font-size: 26px;
+            margin-right: 5px;
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .clear {
+            height: 60px;
+            width: 60px;
+            font-size: 16px;
+            margin-right: 5px;
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .black-button {
+            background-color: #1e1e1e;
+        }
+
+        .orange-button {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p class="js-updateCalculation display"></p>
+
+    <p class="first-row">
+            
+        <button onclick="
+                updateCalculation('1');
+        " class="black-button">
+        1
+        </button>
+    
+        <button onclick="
+                updateCalculation('2');
+        " class="black-button">
+            2
+        </button>
+    
+        <button onclick="
+                updateCalculation('3');
+        " class="black-button">
+            3
+        </button>
+    
+        <button onclick="
+        updateCalculation(' + ');
+        " class="orange-button">
+            +
+        </button>
+    
+    
+        </p>
+        <p class="second-row">
+    
+            <button onclick="
+                updateCalculation('4');
+                " class="black-button">
+                4
+            </button>
+    
+            <button onclick="
+                updateCalculation('5');
+            " class="black-button">
+                5
+            </button>
+    
+            <button onclick="
+                updateCalculation('6');
+            " class="black-button">
+                6
+            </button>
+    
+            <button onclick="
+            updateCalculation(' - ');
+            " class="orange-button">
+                -
+            </button>
+        </p>
+    
+        <p class="third-row">
+    
+            <button onclick="
+                updateCalculation('7');
+                " class="black-button">
+                7
+            </button>
+    
+            <button onclick="
+            updateCalculation('8');
+            " class="black-button">
+                8
+            </button>
+    
+            <button onclick="
+            updateCalculation('9');
+            " class="black-button">
+                9
+            </button>
+    
+            <button onclick="
+            updateCalculation(' * ');
+            " class="orange-button">
+            *
+        </button>
+    
+        </p>
+    
+        <p class="fourth-row">
+    
+            <button onclick="
+                updateCalculation('0');
+                " class="black-button">
+                0
+            </button>
+    
+            <button onclick="
+            updateCalculation('.');
+            " class="black-button">
+                .
+            </button>
+    
+            <button onclick="
+            calculation = eval(calculation);
+            console.log(calculation);
+            displayCalculationElem.innerHTML = calculation;
+            " class="black-button">
+                =
+            </button>
+    
+            <button onclick="
+            updateCalculation(' / ');
+            " class="orange-button">
+                /
+            </button>
+    
+        </p>
+        <p>
+            <button onclick="
+                calculation = '';
+                displayCalculationElem.innerHTML = 0;
+
+                localStorage.setItem('calculation', calculation);
+                " class="clear black-button">
+            Clear    
+            </button>
+        </p>
+    
+    
+        <script>
+            let displayCalculationElem = document.querySelector('.js-updateCalculation');
+            let calculation =  localStorage.getItem('calculation') || '';
+            displayCalculationElem.innerHTML = eval(calculation) || 0;
+
+            function updateCalculation(value){
+                
+
+                calculation += value;
+                displayCalculationElem.innerHTML = calculation;
+                localStorage.setItem('calculation' , calculation);
+                
+            }
+        </script>
+</body>
+</html>
