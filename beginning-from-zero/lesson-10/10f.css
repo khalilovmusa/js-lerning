@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.button {
+    color: #000000;
+    background-color: rgb(240 , 240, 240);
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.is-toggled {
+    color: #fff;
+    background-color: #000000;
+}
